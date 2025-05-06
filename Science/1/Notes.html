@@ -30,7 +30,8 @@
             max-width: 900px;
             margin: 2rem auto;
             background-color: #ffffff;
-            padding: 2rem 2.5rem 3rem 3.5rem;
+            /* Increased top padding to create space for the button */
+            padding: 4.5rem 2.5rem 3rem 3.5rem;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             position: relative;
@@ -46,8 +47,40 @@
             border-radius: 50%;
             box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
         }
-        .page-container::before { top: 40px; }
-        .page-container::after { top: 70px; }
+        /* Adjusted hole punch positions due to increased container padding */
+        .page-container::before { top: 60px; }
+        .page-container::after { top: 90px; }
+
+        /* Back button style - "Tape/Label" look */
+        .back-to-science-btn {
+            display: inline-flex;
+            align-items: center;
+            position: absolute;
+            top: 20px; /* Positioned within the new top padding of page-container */
+            left: 40px;
+            background-color: #fffada;
+            color: #5a4a3a;
+            padding: 6px 12px;
+            border-radius: 3px;
+            text-decoration: none;
+            font-family: 'Kalam', cursive;
+            font-size: 1rem;
+            border: 1px solid #e6d9b0;
+            box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            transition: all 0.2s ease-in-out;
+            transform: rotate(-2deg);
+            z-index: 10;
+        }
+        .back-to-science-btn:hover {
+            background-color: #fcf6c7;
+            box-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+            transform: rotate(-1deg) scale(1.03);
+        }
+        .back-to-science-btn i {
+            margin-right: 7px;
+            font-size: 0.9em;
+        }
+
 
         h1, h2, h3, h4 {
             font-weight: 700;
@@ -56,7 +89,8 @@
             margin-top: 1.5em;
             font-family: 'Kalam', cursive;
         }
-        h1 { font-size: 2.8rem; letter-spacing: -0.01em; border-bottom: 1px dashed #bdc3c7; padding-bottom: 0.5rem; margin-bottom: 1.5rem;}
+        /* Reset H1 margin-top as container padding now handles the space */
+        h1 { font-size: 2.8rem; letter-spacing: -0.01em; border-bottom: 1px dashed #bdc3c7; padding-bottom: 0.5rem; margin-bottom: 1.5rem; margin-top: 0; }
         h2 { font-size: 2.1rem; letter-spacing: -0.01em; margin-top: 2rem;}
         h3 { font-size: 1.6rem; }
         h4 { font-size: 1.3rem; font-weight: 600; font-family: 'Inter', sans-serif; color: #34495e; }
@@ -108,7 +142,7 @@
             margin-bottom: 1rem; box-shadow: 0 3px 6px rgba(0,0,0,0.04);
         }
         .toggle-icon { transition: transform 0.3s ease; color: #7f8c8d; }
-        .toggle-button.active .toggle-icon { transform: rotate(45deg); } /* Changed to 45deg for a '+' to 'x' effect */
+        .toggle-button.active .toggle-icon { transform: rotate(45deg); }
         .toggle-button.active { background-color: #e2e8f0; }
 
         .activity-box {
@@ -127,16 +161,16 @@
         .think-discuss-box p, .think-discuss-box li { margin-bottom: 0.5em; color: #3730a3; }
 
         .tips-tricks-box {
-            background-color: #f0fff4; /* Light green */
-            border-left: 4px solid #48bb78; /* Green border */
+            background-color: #f0fff4;
+            border-left: 4px solid #48bb78;
             padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 0 4px 4px 0; font-size: 0.95em;
         }
         .tips-tricks-box h4 { color: #2f855a; font-family: 'Kalam', cursive; margin-top: 0; }
         .tips-tricks-box p, .tips-tricks-box li { margin-bottom: 0.5em; color: #2c5282; }
 
         .my-explanation-box {
-            background-color: #f3e8ff; /* Light purple/lavender */
-            border-left: 4px solid #9f7aea; /* Purple border */
+            background-color: #f3e8ff;
+            border-left: 4px solid #9f7aea;
             padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 0 4px 4px 0; font-size: 0.95em;
         }
         .my-explanation-box h4 { color: #6b46c1; font-family: 'Kalam', cursive; margin-top: 0; }
@@ -148,18 +182,18 @@
             margin: 1.5rem auto; background-color: #fdfdfa; text-align: center;
             box-shadow: 0 1px 2px rgba(0,0,0,0.03); max-width: 90%;
         }
-        .illustration img { max-width: 100%; height: auto; border-radius: 4px; } /* Added img styling */
+        .illustration img { max-width: 100%; height: auto; border-radius: 4px; }
         .illustration svg { max-width: 100%; height: auto; stroke-width: 1.5; }
         .illustration .label { font-family: 'Kalam', cursive; font-size: 0.9em; color: #555; }
 
-        .quiz-section, .new-questions-section { /* Shared style for quiz and new question sections */
+        .quiz-section, .new-questions-section {
             background-color: #f0f4f8; padding: 1.5rem 2rem; border-radius: 8px;
             margin-top: 2.5rem; border: 1px solid #dfe6ec; box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
         .new-questions-section h3 {
              font-family: 'Kalam', cursive;
              color: #2c3e50;
-             font-size: 1.8rem; /* Slightly smaller than H2 */
+             font-size: 1.8rem;
              margin-bottom: 1rem;
              border-bottom: 1px solid #bdc3c7;
              padding-bottom: 0.3rem;
@@ -205,7 +239,7 @@
             color: #444;
         }
         .answer-content p, .answer-content ul {
-            margin-bottom: 0.5em; /* More compact spacing within answers */
+            margin-bottom: 0.5em;
         }
 
 
@@ -256,24 +290,56 @@
         .list-indicators li::before { content: '🔍'; }
 
         @media (max-width: 768px) {
-            .page-container { margin: 1rem; padding: 1.5rem 1.5rem 2rem 2.5rem; }
-            .page-container::before, .page-container::after { left: 10px; }
-            h1 { font-size: 2.2rem; } h2 { font-size: 1.8rem; }
+            .page-container {
+                margin: 1rem;
+                padding: 5rem 1.5rem 2rem 2.5rem; /* Increased top padding for smaller screens */
+            }
+            .page-container::before, .page-container::after { left: 10px; top: 65px; } /* Adjust hole punch for new button pos */
+            .page-container::after { top: 95px; }
+            h1 { font-size: 2.2rem; margin-top: 0; /* h1 margin-top reset as container padding handles it */ }
+            h2 { font-size: 1.8rem; }
             body { background-size: 20px 28px; }
             .new-questions-section h3 { font-size: 1.6rem; }
+            .back-to-science-btn {
+                left: 25px;
+                top: 20px;
+                padding: 0.5rem 0.9rem;
+                font-size: 0.9rem;
+                transform: rotate(0deg);
+            }
+            .back-to-science-btn:hover {
+                transform: scale(1.02);
+            }
         }
         @media (max-width: 480px) {
-            h1 { font-size: 1.9rem; } h2 { font-size: 1.6rem; }
+            .page-container {
+                padding-top: 5.5rem; /* Further increase top padding for very small screens */
+            }
+            .page-container::before {top: 70px;}
+            .page-container::after {top: 100px;}
+            h1 { font-size: 1.9rem; }
+            h2 { font-size: 1.6rem; }
             .toggle-button { padding: 0.6rem 0.8rem; font-size: 0.9rem;}
             .quiz-section, .new-questions-section { padding: 1rem 1.2rem; }
             .check-answer-btn { font-size: 0.85rem; padding: 0.4rem 0.8rem;}
             .new-questions-section h3 { font-size: 1.4rem; }
+             .back-to-science-btn {
+                left: 20px;
+                top: 22px;
+                font-size: 0.85rem;
+                padding: 0.4rem 0.8rem;
+            }
         }
     </style>
 </head>
 <body>
 
 <div class="page-container">
+    <a href="../index.html" class="back-to-science-btn">
+        <i class="fas fa-arrow-left"></i>
+        <span>Back to Science</span>
+    </a>
+
     <h1><span class="text-2xl mr-2">📖</span> Chemistry Notebook: Unveiling Chemical Reactions & Equations</h1>
 
     <h2><span class="text-xl mr-1">🔬</span> The Dance of Atoms: What IS a Chemical Reaction?</h2>
@@ -844,7 +910,7 @@
         <h3><span class="text-xl mr-1">💡</span> Conceptual Understanding Questions</h3>
         <div class="question-item">
             <p class="question-text">1. Why is respiration considered an exothermic reaction?</p>
-            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
             <div class="answer-content">
                 <p>Respiration is considered an exothermic reaction because energy is released during this process. Glucose combines with oxygen in the cells of our body to produce carbon dioxide, water, and energy. This energy is utilized by the body to perform various life processes.</p>
                 <p class="equation-inline">C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>(aq) + 6O<sub>2</sub>(aq) &rarr; 6CO<sub>2</sub>(aq) + 6H<sub>2</sub>O(l) + Energy</p>
@@ -852,7 +918,7 @@
         </div>
         <div class="question-item">
             <p class="question-text">2. What happens when quicklime is added to water? Write the chemical equation.</p>
-            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
             <div class="answer-content">
                 <p>When quicklime (calcium oxide, CaO) is added to water, it reacts vigorously to form slaked lime (calcium hydroxide, Ca(OH)<sub>2</sub>) and releases a large amount of heat. This is a combination reaction and an exothermic reaction.</p>
                 <p class="equation-block">CaO(s) + H<sub>2</sub>O(l) &rarr; Ca(OH)<sub>2</sub>(aq) + Heat</p>
@@ -860,14 +926,14 @@
         </div>
         <div class="question-item">
             <p class="question-text">3. Explain why a magnesium ribbon should be cleaned before burning in air.</p>
-            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
             <div class="answer-content">
                 <p>Magnesium is a reactive metal. It slowly reacts with oxygen in the air to form a layer of magnesium oxide (MgO) on its surface. This layer is quite stable and can prevent or slow down the burning of magnesium. Therefore, the magnesium ribbon is cleaned with sandpaper to remove this protective layer of magnesium oxide so that the underlying metal can be exposed to air for combustion.</p>
             </div>
         </div>
         <div class="question-item">
             <p class="question-text">4. Can a displacement reaction be a redox reaction? Explain with an example.</p>
-            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
             <div class="answer-content">
                 <p>Yes, most displacement reactions are also redox reactions. In a displacement reaction, a more reactive element displaces a less reactive element from its compound. This involves changes in the oxidation states of the reacting species.</p>
                 <p>Example: Fe(s) + CuSO<sub>4</sub>(aq) &rarr; FeSO<sub>4</sub>(aq) + Cu(s)</p>
@@ -880,7 +946,7 @@
         </div>
         <div class="question-item">
             <p class="question-text">5. What is the difference between a "skeletal" chemical equation and a "balanced" chemical equation? Why is balancing necessary?</p>
-            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
             <div class="answer-content">
                 <p>A <strong class="definition-term">skeletal chemical equation</strong> is an unbalanced chemical equation. It simply represents the reactants and products involved in a chemical reaction using their symbols and formulae, without considering the number of atoms of each element on both sides. Example: Mg + O<sub>2</sub> &rarr; MgO.</p>
                 <p>A <strong class="definition-term">balanced chemical equation</strong> has an equal number of atoms of each element on both the reactant and product sides. It adheres to the Law of Conservation of Mass. Example: 2Mg + O<sub>2</sub> &rarr; 2MgO.</p>
@@ -895,7 +961,7 @@
             <p class="question-text">1. (CBSE 2020) Write balanced chemical equations for the following reactions: <br>
             (a) Hydrogen sulphide gas burns in air to give water and sulphur dioxide. <br>
             (b) Barium chloride reacts with aluminium sulphate to give aluminium chloride and a precipitate of barium sulphate.</p>
-            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
             <div class="answer-content">
                 <p>(a) <span class="equation-inline">2H<sub>2</sub>S(g) + 3O<sub>2</sub>(g) &rarr; 2H<sub>2</sub>O(l) + 2SO<sub>2</sub>(g)</span></p>
                 <p>(b) <span class="equation-inline">3BaCl<sub>2</sub>(aq) + Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>(aq) &rarr; 2AlCl<sub>3</sub>(aq) + 3BaSO<sub>4</sub>(s)&darr;</span></p>
@@ -905,7 +971,7 @@
             <p class="question-text">2. (CBSE 2019) Identify the type of reaction in the following: <br>
             (a) Fe(s) + CuSO<sub>4</sub>(aq) &rarr; FeSO<sub>4</sub>(aq) + Cu(s) <br>
             (b) 2H<sub>2</sub>O(l) <span class="font-normal">--Electricity&rarr;</span> 2H<sub>2</sub>(g) + O<sub>2</sub>(g)</p>
-            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
             <div class="answer-content">
                 <p>(a) Displacement reaction (also a redox reaction).</p>
                 <p>(b) Decomposition reaction (specifically, electrolytic decomposition).</p>
@@ -913,7 +979,7 @@
         </div>
         <div class="question-item">
             <p class="question-text">3. (CBSE 2018) What is observed when a solution of potassium iodide is added to lead nitrate solution? Name the type of reaction. Write a balanced chemical equation for this reaction.</p>
-            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
             <div class="answer-content">
                 <p><strong>Observation:</strong> A yellow precipitate is formed.</p>
                 <p><strong>Type of reaction:</strong> Double displacement reaction (specifically, a precipitation reaction).</p>
@@ -926,7 +992,7 @@
         <h3><span class="text-xl mr-1">✏️</span> Short Answer Questions</h3>
         <div class="question-item">
             <p class="question-text">1. What do you mean by a precipitation reaction? Give an example.</p>
-            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
             <div class="answer-content">
                 <p>A precipitation reaction is a type of chemical reaction in which two soluble salts in aqueous solution combine, and one of the products is an insoluble salt called a precipitate, which settles down.</p>
                 <p>Example: When aqueous sodium chloride (NaCl) is added to aqueous silver nitrate (AgNO<sub>3</sub>), a white precipitate of silver chloride (AgCl) is formed.</p>
@@ -935,7 +1001,7 @@
         </div>
         <div class="question-item">
             <p class="question-text">2. Why does the colour of copper sulphate solution change when an iron nail is dipped in it?</p>
-            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
             <div class="answer-content">
                 <p>Iron is more reactive than copper. When an iron nail is dipped in a blue copper sulphate solution, iron displaces copper from the copper sulphate solution. This forms iron(II) sulphate, which is pale green in solution, and solid copper metal is deposited. The blue colour of copper sulphate fades and a greenish colour appears.</p>
                 <p class="equation-inline">Fe(s) + CuSO<sub>4</sub>(aq) (Blue) &rarr; FeSO<sub>4</sub>(aq) (Pale Green) + Cu(s) (Reddish-brown)</p>
@@ -943,7 +1009,7 @@
         </div>
         <div class="question-item">
             <p class="question-text">3. In the refining of silver, the recovery of silver from silver nitrate solution involved displacement by copper metal. Write down the reaction involved.</p>
-            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
             <div class="answer-content">
                 <p>Copper is more reactive than silver. Therefore, copper will displace silver from silver nitrate solution. The reaction is:</p>
                 <p class="equation-block">Cu(s) + 2AgNO<sub>3</sub>(aq) &rarr; Cu(NO<sub>3</sub>)<sub>2</sub>(aq) + 2Ag(s)</p>
@@ -956,7 +1022,7 @@
         <h3><span class="text-xl mr-1">📄</span> Long Answer Questions</h3>
         <div class="question-item">
             <p class="question-text">1. Explain the different types of decomposition reactions with one example for each. How are these reactions different from combination reactions?</p>
-            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
             <div class="answer-content">
                 <p>Decomposition reactions are those in which a single compound breaks down to give two or more simpler substances. These reactions require energy in the form of heat, light, or electricity.</p>
                 <p>Types of decomposition reactions:</p>
@@ -979,7 +1045,7 @@
             <p class="question-text">2. (a) What is meant by oxidation and reduction? Explain with an example involving the gain/loss of oxygen and another example involving the gain/loss of hydrogen. <br> (b) Identify the substances oxidized, substances reduced, oxidizing agents, and reducing agents in the following reactions: <br>
             (i) MnO<sub>2</sub>(s) + 4HCl(aq) &rarr; MnCl<sub>2</sub>(aq) + 2H<sub>2</sub>O(l) + Cl<sub>2</sub>(g) <br>
             (ii) Fe<sub>2</sub>O<sub>3</sub>(s) + 3CO(g) &rarr; 2Fe(s) + 3CO<sub>2</sub>(g)</p>
-            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show Answer</button>
             <div class="answer-content">
                 <p><strong>(a) Oxidation and Reduction:</strong></p>
                 <p><strong>Oxidation</strong> is a process that involves:</p>
@@ -1014,7 +1080,8 @@
     </div>
 
 
-    <div id="keyConceptsSection" class="mt-12 pt-8 border-t-2 border-gray-300"> <h2><span class="text-xl mr-1">📝</span> Key Concepts Recap</h2>
+    <div id="keyConceptsSection" class="mt-12 pt-8 border-t-2 border-gray-300">
+        <h2><span class="text-xl mr-1">📝</span> Key Concepts Recap</h2>
         <div class="my-explanation-box" style="background-color: #e6fffa; border-left-color: #38b2ac;">
             <h4 style="color: #2c7a7b;">Important Definitions & Concepts</h4>
             <p><strong>Chemical Reaction:</strong> Process involving rearrangement of atoms to form new substances (products) from original substances (reactants). Governed by the <strong class="definition-term">Law of Conservation of Mass</strong>.</p>
@@ -1083,17 +1150,16 @@
     function toggleContent(id) {
         const content = document.getElementById(id);
         const button = content.previousElementSibling; // The toggle button
-        const icon = button.querySelector('.toggle-icon'); // The SVG icon
+        const iconContainer = button.querySelector('.toggle-icon'); // The SVG icon's container
 
         if (content.style.display === 'block') {
             content.style.display = 'none';
             button.classList.remove('active');
-            if (icon) icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>'; // Plus icon
+            if (iconContainer) iconContainer.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>'; // Plus icon
         } else {
             content.style.display = 'block';
             button.classList.add('active');
-            if (icon) icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6"></path>'; // Minus icon (or use a cross like before if preferred)
-
+             if (iconContainer) iconContainer.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6"></path>'; // Minus icon
         }
     }
 
@@ -1121,7 +1187,7 @@
     function checkSingleAnswer(questionName) {
         const feedbackEl = document.getElementById(`feedback-${questionName}`);
         const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
-        const questionContainer = document.getElementById(`question${questionName.substring(1)}`); // e.g., question1
+        const questionContainer = document.getElementById(`question${questionName.substring(1)}`);
         const checkButton = questionContainer.querySelector('.check-answer-btn');
 
 
@@ -1145,14 +1211,10 @@
         }
     }
 
-    // Basic window.onload, can be expanded if needed
     window.onload = function() {
-        // Any initial setup can go here
         console.log("Page loaded and scripts are running.");
-
-        // Initialize toggle icons for main sections to plus
-        document.querySelectorAll('.toggle-button .toggle-icon').forEach(icon => {
-             icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>'; // Plus icon
+        document.querySelectorAll('.toggle-button .toggle-icon').forEach(iconContainer => {
+             iconContainer.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>';
         });
     };
 </script>
