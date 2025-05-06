@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 10 Chemistry Notes: Unveiling Chemical Reactions & Equations - Notebook Edition (NCERT Aligned)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+    <style>
+        /* Custom styles for a Notebook-inspired UI */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfdfa; /* Creamy white paper */
+            background-image:
+                linear-gradient(to right, rgba(220, 220, 210, 0.4) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(200, 200, 190, 0.7) 1px, transparent 1px);
+            background-size: 20px 28px; /* Spacing of lines */
+            color: #333;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            padding-bottom: 3rem;
+        }
+        .page-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            background-color: #ffffff;
+            padding: 2rem 2.5rem 3rem 3.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            border-left: 2px solid #e57373; /* Soft red margin line */
+        }
+        .page-container::before, .page-container::after { /* Hole punches */
+            content: '';
+            position: absolute;
+            left: 15px;
+            width: 8px;
+            height: 8px;
+            background-color: #f0f0f0;
+            border-radius: 50%;
+            box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        .page-container::before { top: 40px; }
+        .page-container::after { top: 70px; }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 0.75em;
+            margin-top: 1.5em;
+            font-family: 'Kalam', cursive;
+        }
+        h1 { font-size: 2.8rem; letter-spacing: -0.01em; border-bottom: 1px dashed #bdc3c7; padding-bottom: 0.5rem; margin-bottom: 1.5rem;}
+        h2 { font-size: 2.1rem; letter-spacing: -0.01em; margin-top: 2rem;}
+        h3 { font-size: 1.6rem; }
+        h4 { font-size: 1.3rem; font-weight: 600; font-family: 'Inter', sans-serif; color: #34495e; }
+
+        p { margin-bottom: 1.25em; color: #555; }
+
+        .equation-block {
+            display: block;
+            text-align: center;
+            margin: 1.2em auto;
+            padding: 0.8em;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            font-size: 1.05em;
+            color: #2c3e50;
+            overflow-x: auto;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            border: 1px solid #e0e0e0;
+            line-height: 1.5;
+        }
+        .equation-inline {
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            font-size: 0.95em;
+            color: #2c3e50;
+            background-color: #eef2f7;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            border: 1px solid #dfe6ec;
+        }
+        .code-block {
+            background-color: #f0f4f8; padding: 1rem; margin: 1rem 0;
+            overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05); border-radius: 4px;
+            border: 1px solid #dfe6ec; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            font-size: 0.9em; color: #2c3e50; line-height: 1.6;
+        }
+
+        .toggle-button {
+            cursor: pointer; display: flex; align-items: center; justify-content: space-between;
+            width: 100%; padding: 0.75rem 1rem; border: 1px solid #ced4da;
+            border-radius: 6px; background-color: #f8f9fa; margin-bottom: 0.25rem;
+            transition: all 0.2s ease-in-out; text-align: left; font-weight: 600;
+            color: #34495e; font-family: 'Inter', sans-serif;
+        }
+        .toggle-button:hover { background-color: #e9ecef; border-color: #adb5bd; }
+        .toggle-content {
+            display: none; padding: 1.25rem; border: 1px solid #dee2e6;
+            border-top: none; border-radius: 0 0 6px 6px; background-color: #ffffff;
+            margin-bottom: 1rem; box-shadow: 0 3px 6px rgba(0,0,0,0.04);
+        }
+        .toggle-icon { transition: transform 0.3s ease; color: #7f8c8d; }
+        .toggle-button.active .toggle-icon { transform: rotate(45deg); } /* Changed to 45deg for a '+' to 'x' effect */
+        .toggle-button.active { background-color: #e2e8f0; }
+
+        .activity-box {
+            background-color: #fffbeb; border-left: 4px solid #facc15;
+            padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 0 4px 4px 0; font-size: 0.95em;
+        }
+        .activity-box h4 { color: #b45309; font-family: 'Kalam', cursive; margin-top: 0; }
+        .activity-box p { margin-bottom: 0.5em; color: #713f12; }
+        .activity-box .caution { color: #ef4444; font-weight: bold; }
+
+        .think-discuss-box {
+            background-color: #eef2ff; border-left: 4px solid #6366f1;
+            padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 0 4px 4px 0; font-size: 0.95em;
+        }
+        .think-discuss-box h4 { color: #4338ca; font-family: 'Kalam', cursive; margin-top: 0; }
+        .think-discuss-box p, .think-discuss-box li { margin-bottom: 0.5em; color: #3730a3; }
+
+        .tips-tricks-box {
+            background-color: #f0fff4; /* Light green */
+            border-left: 4px solid #48bb78; /* Green border */
+            padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 0 4px 4px 0; font-size: 0.95em;
+        }
+        .tips-tricks-box h4 { color: #2f855a; font-family: 'Kalam', cursive; margin-top: 0; }
+        .tips-tricks-box p, .tips-tricks-box li { margin-bottom: 0.5em; color: #2c5282; }
+
+        .my-explanation-box {
+            background-color: #f3e8ff; /* Light purple/lavender */
+            border-left: 4px solid #9f7aea; /* Purple border */
+            padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 0 4px 4px 0; font-size: 0.95em;
+        }
+        .my-explanation-box h4 { color: #6b46c1; font-family: 'Kalam', cursive; margin-top: 0; }
+        .my-explanation-box p, .my-explanation-box li { margin-bottom: 0.5em; color: #553c9a; }
+
+
+        .illustration {
+            border: 1px dashed #bdc3c7; padding: 1rem; border-radius: 6px;
+            margin: 1.5rem auto; background-color: #fdfdfa; text-align: center;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.03); max-width: 90%;
+        }
+        .illustration img { max-width: 100%; height: auto; border-radius: 4px; } /* Added img styling */
+        .illustration svg { max-width: 100%; height: auto; stroke-width: 1.5; }
+        .illustration .label { font-family: 'Kalam', cursive; font-size: 0.9em; color: #555; }
+
+        .quiz-section, .new-questions-section { /* Shared style for quiz and new question sections */
+            background-color: #f0f4f8; padding: 1.5rem 2rem; border-radius: 8px;
+            margin-top: 2.5rem; border: 1px solid #dfe6ec; box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .new-questions-section h3 {
+             font-family: 'Kalam', cursive;
+             color: #2c3e50;
+             font-size: 1.8rem; /* Slightly smaller than H2 */
+             margin-bottom: 1rem;
+             border-bottom: 1px solid #bdc3c7;
+             padding-bottom: 0.3rem;
+        }
+        .question-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed #d1d5db;
+        }
+        .question-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .question-text {
+            font-weight: 600;
+            color: #34495e;
+            margin-bottom: 0.5rem;
+            font-family: 'Inter', sans-serif;
+        }
+        .answer-toggle-btn {
+            background-color: #7f8c8d;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            border: none;
+            margin-top: 0.5rem;
+            transition: background-color 0.2s;
+        }
+        .answer-toggle-btn:hover {
+            background-color: #6c7a7b;
+        }
+        .answer-content {
+            display: none;
+            margin-top: 0.75rem;
+            padding: 0.75rem;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            font-size: 0.95em;
+            color: #444;
+        }
+        .answer-content p, .answer-content ul {
+            margin-bottom: 0.5em; /* More compact spacing within answers */
+        }
+
+
+        .quiz-question {
+            margin-bottom: 1.5rem; padding-bottom: 1.5rem;
+            border-bottom: 1px dashed #bdc3c7;
+        }
+        .quiz-question:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .quiz-options label {
+            display: block; margin-bottom: 0.75rem; padding: 0.75rem 1rem;
+            border: 1px solid #ced4da; border-radius: 6px; cursor: pointer;
+            transition: background-color 0.2s, border-color 0.2s; background-color: #fff;
+        }
+        .quiz-options label:hover { background-color: #e9f2fa; border-color: #90b8d8; }
+        .quiz-options input[type="radio"] { margin-right: 0.75rem; accent-color: #2980b9; }
+
+        .check-answer-btn {
+            padding: 0.5rem 1rem; background-color: #5dade2;
+            color: #ffffff; border: none; border-radius: 4px; cursor: pointer;
+            transition: background-color 0.2s; font-weight: 500; font-size: 0.9rem;
+            display: inline-block; margin-top: 0.75rem;
+        }
+        .check-answer-btn:hover { background-color: #4a98c9; }
+        .check-answer-btn:disabled { background-color: #bdc3c7; cursor: not-allowed; }
+
+
+        .quiz-feedback {
+            margin-top: 1rem; font-weight: 500; padding: 0.75rem;
+            border-radius: 6px; font-family: 'Inter', sans-serif;
+        }
+        .correct { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;}
+        .incorrect { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb;}
+
+        .info-box {
+            background-color: #e6f0ff; border-left: 3px solid #5dade2;
+            padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 0 4px 4px 0;
+            font-size: 0.95em;
+        }
+        .info-box p { margin-bottom: 0.5em; color: #34495e; }
+        .info-box strong { color: #2980b9; }
+
+        .highlight { background-color: #fffacd; padding: 0.1em 0.3em; border-radius: 3px; border-bottom: 1px dotted #ccc; }
+        .definition-term { font-weight: 600; color: #2980b9; border-bottom: 1px dotted #7f8c8d; }
+        .list-styled { list-style: none; padding-left: 0; }
+        .list-styled li { position: relative; padding-left: 1.8em; margin-bottom: 0.6em; }
+        .list-styled li::before { content: '✏️'; position: absolute; left: 0; font-size: 0.9em; top: 2px; }
+        .list-prevention li::before { content: '🛡️'; }
+        .list-indicators li::before { content: '🔍'; }
+
+        @media (max-width: 768px) {
+            .page-container { margin: 1rem; padding: 1.5rem 1.5rem 2rem 2.5rem; }
+            .page-container::before, .page-container::after { left: 10px; }
+            h1 { font-size: 2.2rem; } h2 { font-size: 1.8rem; }
+            body { background-size: 20px 28px; }
+            .new-questions-section h3 { font-size: 1.6rem; }
+        }
+        @media (max-width: 480px) {
+            h1 { font-size: 1.9rem; } h2 { font-size: 1.6rem; }
+            .toggle-button { padding: 0.6rem 0.8rem; font-size: 0.9rem;}
+            .quiz-section, .new-questions-section { padding: 1rem 1.2rem; }
+            .check-answer-btn { font-size: 0.85rem; padding: 0.4rem 0.8rem;}
+            .new-questions-section h3 { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-container">
+    <h1><span class="text-2xl mr-2">📖</span> Chemistry Notebook: Unveiling Chemical Reactions & Equations</h1>
+
+    <h2><span class="text-xl mr-1">🔬</span> The Dance of Atoms: What IS a Chemical Reaction?</h2>
+    <p>Consider daily life: milk souring, iron rusting, food cooking, digestion, respiration. In all these, the initial substances change their nature and identity. This is a <strong class="definition-term">chemical change</strong>, and when it occurs, we say a <strong class="definition-term">chemical reaction</strong> has taken place. It's a process where <strong class="definition-term">reactants</strong> transform into new <strong class="definition-term">products</strong> with different properties, involving the breaking and forming of chemical bonds.</p>
+    <div class="my-explanation-box">
+        <h4>My Short Explanation 💬</h4>
+        <p>Think of it like LEGOs! Reactants are your starting LEGO pieces. A chemical reaction is when you take them apart (break bonds) and rebuild them into something new (form new bonds) – that's your product! The new structure looks and behaves differently than the original pieces.</p>
+    </div>
+    <div class="activity-box">
+        <h4>Activity 1.1: Burning Magnesium Ribbon</h4>
+        <p><strong>Procedure:</strong> Clean a magnesium ribbon (3-4 cm) with sandpaper. Hold it with tongs and burn it using a spirit lamp or burner, collecting the ash in a watch-glass. (<span class="caution">Teacher assistance needed, wear eye protection.</span>)</p>
+        <p><strong>Observation:</strong> Magnesium ribbon burns with a <strong class="highlight">dazzling white flame</strong> and changes into a <strong class="highlight">white powder</strong>.</p>
+        <p><strong>Conclusion:</strong> This white powder is magnesium oxide (MgO), formed by the reaction between magnesium and oxygen from the air.</p>
+    </div>
+
+    <button class="toggle-button" onclick="toggleContent('indicators')">
+        <span>Clues of Chemical Change: Spotting a Reaction</span>
+        <svg class="toggle-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+    </button>
+    <div id="indicators" class="toggle-content">
+        <p>How can we tell if a chemical reaction has occurred? Look for these tell-tale signs:</p>
+        <ul class="list-styled list-indicators">
+            <li><strong>Change in State:</strong> E.g., Solid wax burns to form gaseous CO<sub>2</sub> and water vapor.</li>
+            <li><strong>Change in Color:</strong> E.g., Iron (silvery) rusting to reddish-brown.</li>
+            <li><strong>Evolution of a Gas:</strong> E.g., Bubbles when zinc reacts with acid.</li>
+            <li><strong>Change in Temperature:</strong> (Exothermic = hotter, Endothermic = colder).</li>
+            <li><strong>Formation of a Precipitate:</strong> An insoluble solid formed when solutions mix.</li>
+        </ul>
+        <div class="tips-tricks-box">
+            <h4>Tips & Tricks! 💡</h4>
+            <p>Not all changes are chemical! Melting ice is a physical change (state change, but still H<sub>2</sub>O). If a <strong class="highlight">new substance with new properties</strong> is formed, it's likely chemical.</p>
+        </div>
+        <div class="activity-box">
+            <h4>Activity 1.2: Lead Nitrate + Potassium Iodide</h4>
+            <p><strong>Procedure:</strong> Take lead nitrate solution in a test tube. Add potassium iodide solution.</p>
+            <p><strong>Observation:</strong> A <strong class="highlight">yellow precipitate</strong> is formed.</p>
+        </div>
+        <div class="activity-box">
+            <h4>Activity 1.3: Zinc Granules + Acid</h4>
+            <p><strong>Procedure:</strong> Take a few zinc granules. Add dilute HCl or H<sub>2</sub>SO<sub>4</sub>. (<span class="caution">Handle acid with care.</span>)</p>
+            <p><strong>Observation:</strong> Bubbles of gas (H<sub>2</sub>). Flask may feel warm.</p>
+        </div>
+    </div>
+
+    <h2><span class="text-xl mr-1">✍️</span> Chemical Shorthand: Mastering Equations</h2>
+    <p>A <strong class="definition-term">chemical equation</strong> is the chemist's concise way to describe a reaction.</p>
+    <button class="toggle-button" onclick="toggleContent('writingEquations')">
+        <span>From Words to Balanced Equations: The How-To</span>
+        <svg class="toggle-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+    </button>
+    <div id="writingEquations" class="toggle-content">
+        <h4>Word Equations vs. Symbol Equations</h4>
+        <p>Word: <span class="italic">Magnesium + Oxygen &rarr; Magnesium oxide</span></p>
+        <p>Symbol (skeletal): <span class="equation-block">Mg + O<sub>2</sub> &rarr; MgO</span></p>
+        <h4>The Golden Rule: Balancing with the Law of Conservation of Mass</h4>
+        <p>Atoms aren't created or destroyed, just rearranged. So, atom counts must be equal on both sides. We use <strong class="definition-term">coefficients</strong> (numbers in front) to balance.</p>
+        <div class="my-explanation-box">
+            <h4>My Short Explanation 💬</h4>
+            <p>Balancing is like making sure you have the same number of each type of LEGO brick before and after you build something new. If you start with 2 red bricks and 4 blue bricks, your final creation must also use exactly 2 red and 4 blue bricks, just arranged differently!</p>
+        </div>
+        <p><strong>Example: Balancing Fe + H<sub>2</sub>O &rarr; Fe<sub>3</sub>O<sub>4</sub> + H<sub>2</sub></strong> (NCERT Method)</p>
+        <div class="code-block">
+<strong>Step I:</strong> Draw boxes around each formula. (Do not change anything inside boxes). This is an instructional step.
+   [Fe] + [H<sub>2</sub>O] &rarr; [Fe<sub>3</sub>O<sub>4</sub>] + [H<sub>2</sub>]
+<strong>Step II:</strong> List atoms of each element on LHS and RHS.
+   Element | LHS Atoms | RHS Atoms
+   --------------------------------
+   Fe      | 1         | 3
+   H       | 2         | 2
+   O       | 1         | 4
+<strong>Step III:</strong> Start with the compound having max atoms ([Fe<sub>3</sub>O<sub>4</sub>]), and element with max atoms in it (Oxygen).
+   To balance Oxygen (1 on LHS, 4 on RHS): Put coefficient '4' before [H<sub>2</sub>O].
+   [Fe] + 4[H<sub>2</sub>O] &rarr; [Fe<sub>3</sub>O<sub>4</sub>] + [H<sub>2</sub>] (Partly balanced)
+<strong>Step IV:</strong> Balance Hydrogen (now 8 on LHS from 4[H<sub>2</sub>O], 2 on RHS). Make H<sub>2</sub> on RHS as 4[H<sub>2</sub>].
+   [Fe] + 4[H<sub>2</sub>O] &rarr; [Fe<sub>3</sub>O<sub>4</sub>] + 4[H<sub>2</sub>] (Partly balanced)
+<strong>Step V:</strong> Balance Iron (1 on LHS, 3 on RHS). Take 3 atoms of Fe on LHS.
+   3[Fe] + 4[H<sub>2</sub>O] &rarr; [Fe<sub>3</sub>O<sub>4</sub>] + 4[H<sub>2</sub>]
+<strong>Step VI:</strong> Check correctness. (Fe:3, H:8, O:4 on both sides). Equation is balanced.
+<strong>Step VII:</strong> Writing Physical States (s, l, g, aq). For this reaction with steam:
+   <span class="equation-block" style="color: #27ae60;">3Fe(s) + 4H<sub>2</sub>O(g) &rarr; Fe<sub>3</sub>O<sub>4</sub>(s) + 4H<sub>2</sub>(g)</span>
+        </div>
+        <div class="tips-tricks-box">
+            <h4>Tips & Tricks! 💡 Balancing Equations</h4>
+            <ul class="list-disc list-inside">
+                <li>Balance metals first, then non-metals (excluding H and O).</li>
+                <li>Balance hydrogen next, then oxygen last (oxygen often appears in multiple compounds).</li>
+                <li>If you see a polyatomic ion (like SO<sub>4</sub><sup>2-</sup>, NO<sub>3</sub><sup>-</sup>) that appears unchanged on both sides, you can often balance it as a single unit.</li>
+                <li>Use the smallest whole number coefficients. If you end up with fractions, multiply the entire equation by the denominator to clear them.</li>
+                <li>Double-check your atom count for every element at the end!</li>
+            </ul>
+        </div>
+        <h4>Making Equations Even More Informative:</h4>
+        <ul class="list-styled">
+            <li><strong>Indicating Physical States:</strong> (s), (l), (g), (aq).
+                Example: <div class="equation-block">2Mg(s) + O<sub>2</sub>(g) &rarr; 2MgO(s)</div>
+            </li>
+            <li><strong>Specifying Reaction Conditions:</strong> Heat (&Delta;), light, catalyst etc. above/below arrow.
+                Example: <div class="equation-block">CaCO<sub>3</sub>(s) <span class="font-normal">--&Delta;&rarr;</span> CaO(s) + CO<sub>2</sub>(g)</div>
+                Example: <div class="equation-block">6CO<sub>2</sub>(aq) + 12H<sub>2</sub>O(l) <span class="font-normal">--Sunlight, Chlorophyll&rarr;</span> C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>(aq) + 6O<sub>2</sub>(aq) + 6H<sub>2</sub>O(l)</div>
+            </li>
+        </ul>
+    </div>
+
+    <h2><span class="text-xl mr-1">🗂️</span> Reaction Families: Classifying Chemical Changes</h2>
+    <p>Chemical reactions involve breaking and making of bonds.</p>
+    <div class="my-explanation-box">
+        <h4>My Short Explanation 💬 Reaction Types Overview</h4>
+        <p>Think of reaction types like different dance moves atoms can do:</p>
+        <ul class="list-disc list-inside">
+            <li><strong>Combination:</strong> Two dancers join to become one pair. (A + B &rarr; AB)</li>
+            <li><strong>Decomposition:</strong> One pair splits into individual dancers. (AB &rarr; A + B)</li>
+            <li><strong>Displacement:</strong> One stronger dancer cuts in and takes another's partner. (A + BC &rarr; AC + B)</li>
+            <li><strong>Double Displacement:</strong> Two pairs swap partners. (AB + CD &rarr; AD + CB)</li>
+        </ul>
+    </div>
+
+    <button class="toggle-button" onclick="toggleContent('combination')">
+        <span>Combination Reactions: Coming Together (A + B &rarr; AB)</span>
+        <svg class="toggle-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+    </button>
+    <div id="combination" class="toggle-content">
+        <p>Two or more substances <strong class="highlight">combine to form a single new substance</strong>.</p>
+        <div class="activity-box">
+            <h4>Activity 1.4: Quicklime + Water</h4>
+            <p><strong>Procedure:</strong> Take a small amount of calcium oxide (quicklime) in a beaker. Slowly add water. Touch the beaker.</p>
+            <p><strong>Observation:</strong> The beaker becomes hot. Calcium oxide reacts vigorously with water.
+            <span class="equation-block">CaO(s) + H<sub>2</sub>O(l) &rarr; Ca(OH)<sub>2</sub>(aq) + Heat</span>
+            (Calcium oxide + Water &rarr; Calcium hydroxide (Slaked lime))</p>
+            <p><strong>Conclusion:</strong> This is a combination reaction and also an exothermic reaction.</p>
+        </div>
+        <p><strong>Other Examples:</strong></p>
+        <ul class="list-disc list-inside ml-4 space-y-1">
+            <li>Burning of coal: <span class="equation-inline">C(s) + O<sub>2</sub>(g) &rarr; CO<sub>2</sub>(g)</span></li>
+            <li>Formation of water: <span class="equation-inline">2H<sub>2</sub>(g) + O<sub>2</sub>(g) &rarr; 2H<sub>2</sub>O(l)</span></li>
+        </ul>
+        <div class="info-box">
+            <p><strong>Exothermic Reactions:</strong> Reactions in which heat is released along with product formation. Burning of natural gas (<span class="equation-inline">CH<sub>4</sub>(g) + 2O<sub>2</sub>(g) &rarr; CO<sub>2</sub>(g) + 2H<sub>2</sub>O(g)</span>) and respiration (<span class="equation-inline">C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>(aq) + 6O<sub>2</sub>(aq) &rarr; 6CO<sub>2</sub>(aq) + 6H<sub>2</sub>O(l) + energy</span>) are exothermic. Decomposition of vegetable matter into compost is also exothermic.</p>
+        </div>
+    </div>
+
+    <button class="toggle-button" onclick="toggleContent('decomposition')">
+        <span>Decomposition Reactions: Breaking Apart (AB &rarr; A + B)</span>
+         <svg class="toggle-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+    </button>
+    <div id="decomposition" class="toggle-content">
+        <p>One substance <strong class="highlight">breaks down into two or more simpler substances</strong>. Often needs energy.</p>
+        <h4>1. Thermal Decomposition (Heat):</h4>
+        <div class="activity-box">
+            <h4>Activity 1.5: Heating Ferrous Sulfate</h4>
+            <p><strong>Procedure:</strong> Take ~2g ferrous sulfate crystals (FeSO<sub>4</sub>&middot;7H<sub>2</sub>O) in a dry boiling tube. Note initial green color. Heat over a flame. (<span class="caution">Do not point tube at anyone, waft gas gently.</span>)</p>
+            <p><strong>Observation:</strong> Green color changes. Characteristic odor of burning sulfur.
+            <span class="equation-block">2FeSO<sub>4</sub>(s) <span class="font-normal">--&Delta;&rarr;</span> Fe<sub>2</sub>O<sub>3</sub>(s) + SO<sub>2</sub>(g) + SO<sub>3</sub>(g)</span>
+            (Ferrous sulfate (initially green) &rarr; Ferric oxide (brown) + Sulfur dioxide + Sulfur trioxide)</p>
+            <p><strong>Note:</strong> FeSO<sub>4</sub> crystals first lose water of crystallization.</p>
+        </div>
+        <div class="activity-box">
+            <h4>Activity 1.6: Heating Lead Nitrate</h4>
+            <p><strong>Procedure:</strong> Take ~2g lead nitrate powder in a boiling tube. Heat over a flame.</p>
+            <p><strong>Observation:</strong> Emission of <strong class="highlight">brown fumes</strong> of nitrogen dioxide (NO<sub>2</sub>).
+            <span class="equation-block">2Pb(NO<sub>3</sub>)<sub>2</sub>(s) <span class="font-normal">--&Delta;&rarr;</span> 2PbO(s) + 4NO<sub>2</sub>(g) + O<sub>2</sub>(g)</span>
+            (Lead nitrate (white) &rarr; Lead oxide (yellow) + Nitrogen dioxide (brown) + Oxygen)</p>
+        </div>
+        <p>Another example: <span class="equation-inline">CaCO<sub>3</sub>(s) <span class="font-normal">--&Delta;&rarr;</span> CaO(s) + CO<sub>2</sub>(g)</span> (Limestone to Quicklime)</p>
+        <h4>2. Electrolytic Decomposition (Electricity):</h4>
+        <div class="activity-box">
+            <h4>Activity 1.7: Electrolysis of Water</h4>
+            <p><strong>Procedure:</strong> Take a plastic mug, drill holes, fit rubber stoppers with carbon electrodes. Fill with water (add few drops dil. H<sub>2</sub>SO<sub>4</sub>). Invert test tubes filled with water over electrodes. Pass current (6V battery).</p>
+            <p><strong>Observation:</strong> Bubbles at both electrodes. Gas collected in one test tube is double the volume of the other. Testing with burning candle: gas with double volume burns with pop sound (Hydrogen), other gas makes candle burn brighter (Oxygen).</p>
+            <span class="equation-block">2H<sub>2</sub>O(l) <span class="font-normal">--Electricity&rarr;</span> 2H<sub>2</sub>(g) + O<sub>2</sub>(g)</span>
+        </div>
+        <h4>3. Photolytic Decomposition (Light):</h4>
+        <div class="activity-box">
+            <h4>Activity 1.8: Silver Chloride in Sunlight</h4>
+            <p><strong>Procedure:</strong> Take ~2g silver chloride (white) in a china dish. Place in sunlight.</p>
+            <p><strong>Observation:</strong> White silver chloride turns <strong class="highlight">grey</strong>.
+            <span class="equation-block">2AgCl(s) <span class="font-normal">--Sunlight&rarr;</span> 2Ag(s) + Cl<sub>2</sub>(g)</span></p>
+            <p>Similarly for silver bromide: <span class="equation-inline">2AgBr(s) <span class="font-normal">--Sunlight&rarr;</span> 2Ag(s) + Br<sub>2</sub>(g)</span>. These are used in black & white photography.</p>
+        </div>
+        <div class="info-box">
+            <p><strong>Endothermic Reactions:</strong> Reactions requiring energy (heat, light, electricity) are endothermic. Example: Barium hydroxide + Ammonium chloride (test tube becomes cold).</p>
+        </div>
+        <div class="think-discuss-box">
+            <h4>Think & Discuss (Based on NCERT Pg 10)</h4>
+            <ol class="list-decimal list-inside">
+                <li>A solution of a substance ‘X’ is used for whitewashing.
+                    <ul class="list-disc list-inside ml-4">
+                        <li>(i) Name the substance ‘X’ and write its formula. (Answer: Calcium Oxide, CaO)</li>
+                        <li>(ii) Write the reaction of the substance ‘X’ with water. (Answer: CaO(s) + H<sub>2</sub>O(l) &rarr; Ca(OH)<sub>2</sub>(aq))</li>
+                    </ul>
+                </li>
+                <li>Why is the amount of gas collected in one of the test tubes in Activity 1.7 double of the amount collected in the other? Name this gas. (Answer: Hydrogen gas, because water (H<sub>2</sub>O) has two parts hydrogen and one part oxygen by volume).</li>
+            </ol>
+        </div>
+    </div>
+
+    <button class="toggle-button" onclick="toggleContent('displacement')">
+        <span>Displacement Reactions: The Swap Out (A + BC &rarr; AC + B)</span>
+         <svg class="toggle-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+    </button>
+    <div id="displacement" class="toggle-content">
+        <p>In a <strong class="definition-term">displacement reaction</strong>, a <strong class="highlight">more reactive element displaces (or "kicks out") a less reactive element</strong> from its compound (usually in solution).</p>
+        <div class="tips-tricks-box">
+            <h4>Tips & Tricks! 💡 Reactivity Series</h4>
+            <p>To predict displacement, you need the reactivity series! A common mnemonic: "Please Stop Calling Me A Zebra, Instead Try Learning How Copper Saves Gold." (K, Na, Ca, Mg, Al, Zn, Fe, Sn, Pb, H, Cu, Ag, Au). Elements higher up can displace those lower down from their salt solutions.</p>
+        </div>
+        <div class="activity-box">
+            <h4>Activity 1.9: Iron Nails in Copper Sulfate</h4>
+            <p><strong>Procedure:</strong> Take three iron nails, clean them. Take two test tubes (A & B) with ~10mL copper sulfate solution each. Immerse two iron nails tied with a thread in test tube B for ~20 mins. Keep one nail aside.</p>
+            <p><strong>Observation:</strong> Iron nails become brownish. Blue color of copper sulfate in test tube B fades.
+            <span class="equation-block">Fe(s) + CuSO<sub>4</sub>(aq) &rarr; FeSO<sub>4</sub>(aq) + Cu(s)</span>
+            (Copper sulfate (blue) + Iron &rarr; Iron sulfate (light green) + Copper (brownish))</p>
+        </div>
+        <p><strong>Other Examples:</strong></p>
+        <ul class="list-disc list-inside ml-4 space-y-1">
+            <li><span class="equation-inline">Zn(s) + CuSO<sub>4</sub>(aq) &rarr; ZnSO<sub>4</sub>(aq) + Cu(s)</span></li>
+            <li><span class="equation-inline">Pb(s) + CuCl<sub>2</sub>(aq) &rarr; PbCl<sub>2</sub>(aq) + Cu(s)</span></li>
+        </ul>
+        <p>(Zinc and lead are more reactive than copper).</p>
+    </div>
+
+    <button class="toggle-button" onclick="toggleContent('double_displacement')">
+        <span>Double Displacement Reactions: Partner Exchange (AB + CD &rarr; AD + CB)</span>
+         <svg class="toggle-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+    </button>
+    <div id="double_displacement" class="toggle-content">
+        <p>In a <strong class="definition-term">double displacement reaction</strong>, two compounds react by <strong class="highlight">exchanging their ions (or groups of atoms) to form two new compounds</strong>.</p>
+        <h4>1. Precipitation Reactions:</h4>
+        <p>Forms an insoluble solid (<strong class="definition-term">precipitate</strong>).</p>
+        <div class="activity-box">
+            <h4>Activity 1.10: Sodium Sulfate + Barium Chloride</h4>
+            <p><strong>Procedure:</strong> Take ~3mL sodium sulfate solution. In another test tube, ~3mL barium chloride solution. Mix.</p>
+            <p><strong>Observation:</strong> A <strong class="highlight">white insoluble substance (precipitate)</strong> is formed.
+            <span class="equation-block">Na<sub>2</sub>SO<sub>4</sub>(aq) + BaCl<sub>2</sub>(aq) &rarr; BaSO<sub>4</sub>(s)&darr; + 2NaCl(aq)</span>
+            (Sodium sulfate + Barium chloride &rarr; Barium sulfate (white ppt) + Sodium chloride)</p>
+            <p>The white precipitate BaSO<sub>4</sub> is formed by reaction of SO<sub>4</sub><sup>2-</sup> and Ba<sup>2+</sup> ions.</p>
+        </div>
+        <div class="tips-tricks-box">
+            <h4>Tips & Tricks! 💡 Spotting Precipitation</h4>
+            <p>Look for reactions between two aqueous solutions (aq) that form a solid (s). Solubility rules (you'll learn more later) help predict precipitates, but for now, look for the "(s)" symbol in product side!</p>
+        </div>
+        <p>Recall Activity 1.2 (Lead(II) nitrate + Potassium iodide):
+        <span class="equation-inline">Pb(NO<sub>3</sub>)<sub>2</sub>(aq) + 2KI(aq) &rarr; PbI<sub>2</sub>(s)&darr; + 2KNO<sub>3</sub>(aq)</span> (Yellow precipitate of PbI<sub>2</sub>).</p>
+    </div>
+
+    <button class="toggle-button" onclick="toggleContent('redox')">
+        <span>Oxidation & Reduction (Redox Reactions): The Electron Game</span>
+        <svg class="toggle-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+    </button>
+    <div id="redox" class="toggle-content">
+        <p><strong class="definition-term">Oxidation:</strong> Gain of Oxygen / Loss of Hydrogen / Loss of Electrons.</p>
+        <p><strong class="definition-term">Reduction:</strong> Loss of Oxygen / Gain of Hydrogen / Gain of Electrons.</p>
+        <div class="my-explanation-box">
+            <h4>My Short Explanation 💬 Redox Simply</h4>
+            <p>Redox is all about electrons changing hands! If something loses electrons, it's oxidized (LEO the lion says GER: Loss of Electrons is Oxidation, Gain of Electrons is Reduction). Or remember OIL RIG: Oxidation Is Loss, Reduction Is Gain (of electrons).</p>
+            <p>The one giving away oxygen (or gaining hydrogen) is the <strong class="definition-term">oxidizing agent</strong> (it makes the other guy oxidize). The one taking oxygen (or giving hydrogen) is the <strong class="definition-term">reducing agent</strong>.</p>
+        </div>
+        <div class="activity-box">
+            <h4>Activity 1.11: Heating Copper Powder</h4>
+            <p><strong>Procedure:</strong> Heat a china dish with ~1g copper powder.</p>
+            <p><strong>Observation:</strong> Surface of copper powder becomes coated with black copper(II) oxide (CuO).
+            <span class="equation-block">2Cu(s) + O<sub>2</sub>(g) <span class="font-normal">--&Delta;&rarr;</span> 2CuO(s)</span>
+            (Copper is oxidized as it gains oxygen).</p>
+            <p>If hydrogen gas is passed over this heated CuO, the black coating turns brown (reverse reaction, Cu is formed):
+            <span class="equation-block">CuO(s) + H<sub>2</sub>(g) <span class="font-normal">--&Delta;&rarr;</span> Cu(s) + H<sub>2</sub>O(l)</span>
+            Here, CuO loses oxygen (reduced), H<sub>2</sub> gains oxygen (oxidized).</p>
+        </div>
+        <p><strong>Other Examples:</strong></p>
+        <ul class="list-disc list-inside ml-4 space-y-1">
+            <li><span class="equation-inline">ZnO(s) + C(s) &rarr; Zn(s) + CO(g)</span> (ZnO reduced, C oxidized)</li>
+            <li><span class="equation-inline">MnO<sub>2</sub>(s) + 4HCl(aq) &rarr; MnCl<sub>2</sub>(aq) + 2H<sub>2</sub>O(l) + Cl<sub>2</sub>(g)</span> (MnO<sub>2</sub> reduced, HCl oxidized to Cl<sub>2</sub>)</li>
+        </ul>
+        <div class="think-discuss-box">
+            <h4>Think & Discuss (Based on NCERT Pg 13)</h4>
+            <p>Recall Activity 1.1 (Mg ribbon burning). Is magnesium being oxidised or reduced? (Answer: Oxidised, as it gains oxygen).</p>
+        </div>
+    </div>
+
+    <h2><span class="text-xl mr-1">✨</span> Everyday Chemistry: Oxidation's Impact</h2>
+    <button class="toggle-button" onclick="toggleContent('corrosion')">
+        <span>Corrosion: When Metals Weaken</span>
+        <svg class="toggle-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+    </button>
+    <div id="corrosion" class="toggle-content">
+        <p><strong class="definition-term">Corrosion</strong> is when a metal is attacked by environmental substances. It's an oxidation process.</p>
+        <div class="my-explanation-box">
+            <h4>My Short Explanation 💬 Corrosion</h4>
+            <p>Think of corrosion like nature trying to "un-refine" metals, taking them back to their more stable ore forms (often oxides or sulfides). Rusting of iron is the most common example we see.</p>
+        </div>
+        <p><strong>Common Examples:</strong></p>
+        <ul class="list-styled list-prevention">
+            <li><strong>Rusting of Iron:</strong> Reddish-brown Fe<sub>2</sub>O<sub>3</sub>&middot;xH<sub>2</sub>O.</li>
+            <li><strong>Tarnishing of Silver:</strong> Black Ag<sub>2</sub>S.</li>
+            <li><strong>Green coating on Copper.</strong></li>
+        </ul>
+        <div class="tips-tricks-box">
+            <h4>Tips & Tricks! 💡 Fighting Corrosion</h4>
+            <p>The key is to create a barrier between the metal and air/moisture (painting, oiling) or use a more reactive "sacrificial" metal (galvanizing).</p>
+        </div>
+        <p><strong>Prevention Methods:</strong> Painting, oiling, greasing, galvanizing, chrome plating, anodizing, alloying.</p>
+    </div>
+
+    <button class="toggle-button" onclick="toggleContent('rancidity')">
+        <span>Rancidity: When Food Goes Bad</span>
+        <svg class="toggle-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+    </button>
+    <div id="rancidity" class="toggle-content">
+        <p><strong class="definition-term">Rancidity</strong>: Oxidation of fats/oils in food, causing bad smell/taste.</p>
+        <div class="my-explanation-box">
+            <h4>My Short Explanation 💬 Rancidity</h4>
+            <p>Oxygen attacks the fats and oils in your chips or nuts, making them taste stale or "off." That's rancidity. Removing oxygen (like in chip bags) or adding "bodyguards" (antioxidants) helps prevent it.</p>
+        </div>
+        <p><strong>Prevention:</strong> Adding antioxidants (substances preventing oxidation like BHA, BHT), packaging in nitrogen gas, using airtight containers, refrigeration, storing away from light.</p>
+    </div>
+    <div class="think-discuss-box">
+        <h4>Think & Discuss (Based on NCERT Pg 13)</h4>
+        <ol class="list-decimal list-inside">
+            <li>Why does the colour of copper sulphate solution change when an iron nail is dipped in it? (Answer: Iron displaces copper from copper sulphate solution, forming iron sulphate, which is light green. Fe(s) + CuSO<sub>4</sub>(aq) &rarr; FeSO<sub>4</sub>(aq) + Cu(s))</li>
+            <li>Give an example of a double displacement reaction other than Activity 1.10. (Answer: Pb(NO<sub>3</sub>)<sub>2</sub>(aq) + 2KI(aq) &rarr; PbI<sub>2</sub>(s)&darr; + 2KNO<sub>3</sub>(aq))</li>
+            <li>Identify substances oxidised and reduced:
+                <ul class="list-disc list-inside ml-4">
+                    <li>(i) 4Na(s) + O<sub>2</sub>(g) &rarr; 2Na<sub>2</sub>O(s) (Na oxidised, O<sub>2</sub> reduced)</li>
+                    <li>(ii) CuO(s) + H<sub>2</sub>(g) &rarr; Cu(s) + H<sub>2</sub>O(l) (CuO reduced, H<sub>2</sub> oxidised)</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <h2><span class="text-xl mr-1">🔥❄️</span> Energy in Action: Exothermic & Endothermic Journeys</h2>
+    <button class="toggle-button" onclick="toggleContent('exothermicEndothermic')">
+        <span>Exothermic vs. Endothermic: The Heat Exchange</span>
+        <svg class="toggle-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+    </button>
+    <div id="exothermicEndothermic" class="toggle-content">
+        <div class="my-explanation-box">
+            <h4>My Short Explanation 💬 Exo vs. Endo</h4>
+            <p><strong>Exo</strong>thermic = Heat <strong class="highlight">Ex</strong>its (reaction feels hot).</p>
+            <p><strong>En</strong>dothermic = Heat <strong class="highlight">En</strong>ters (reaction feels cold or needs continuous heating).</p>
+        </div>
+        <h4>Exothermic Reactions: Heat Out! 🔥</h4>
+        <p>Reactions that <strong class="highlight">release heat energy</strong>.</p>
+        <p>E.g., Burning fuel (<span class="equation-inline">CH<sub>4</sub>(g) + 2O<sub>2</sub>(g) &rarr; CO<sub>2</sub>(g) + 2H<sub>2</sub>O(g) + Heat</span>), respiration (<span class="equation-inline">C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>(aq) + 6O<sub>2</sub>(aq) &rarr; 6CO<sub>2</sub>(aq) + 6H<sub>2</sub>O(l) + Energy</span>).</p>
+        <h4>Endothermic Reactions: Heat In! ❄️</h4>
+        <p>Reactions that <strong class="highlight">absorb heat energy</strong>.</p>
+        <p>E.g., Photosynthesis, decomposition of CaCO<sub>3</sub> (<span class="equation-inline">CaCO<sub>3</sub>(s) + Heat &rarr; CaO(s) + CO<sub>2</sub>(g)</span>).</p>
+    </div>
+
+    <div class="quiz-section">
+        <h3><span class="text-xl mr-1">🧠</span> Test Your Alchemist Skills!</h3>
+        <form id="quiz-form">
+            <div class="quiz-question" id="question1">
+                <p class="font-semibold text-md mb-2" style="font-family: 'Inter', sans-serif;">1. Which of the following is a defining characteristic of a chemical change, distinguishing it from a physical change?</p>
+                <div class="quiz-options">
+                    <label><input type="radio" name="q1" value="a"> a) Change in state or appearance.</label>
+                    <label><input type="radio" name="q1" value="b"> b) Formation of one or more new substances with different properties.</label>
+                    <label><input type="radio" name="q1" value="c"> c) The change is easily reversible.</label>
+                    <label><input type="radio" name="q1" value="d"> d) No energy change is involved.</label>
+                </div>
+                <button type="button" class="check-answer-btn" onclick="checkSingleAnswer('q1')">Check Answer</button>
+                <div id="feedback-q1" class="quiz-feedback" style="display:none;"></div>
+            </div>
+
+            <div class="quiz-question" id="question2">
+                <p class="font-semibold text-md mb-2" style="font-family: 'Inter', sans-serif;">2. The equation CuO + H<sub>2</sub> &rarr; Cu + H<sub>2</sub>O is an example of:</p>
+                <div class="quiz-options">
+                    <label><input type="radio" name="q2" value="a"> a) Combination reaction</label>
+                    <label><input type="radio" name="q2" value="b"> b) Decomposition reaction</label>
+                    <label><input type="radio" name="q2" value="c"> c) Displacement reaction</label>
+                    <label><input type="radio" name="q2" value="d"> d) Redox reaction (and displacement)</label>
+                </div>
+                <button type="button" class="check-answer-btn" onclick="checkSingleAnswer('q2')">Check Answer</button>
+                <div id="feedback-q2" class="quiz-feedback" style="display:none;"></div>
+            </div>
+
+            <div class="quiz-question" id="question3">
+                <p class="font-semibold text-md mb-2" style="font-family: 'Inter', sans-serif;">3. Why must a chemical equation always be balanced?</p>
+                <div class="quiz-options">
+                    <label><input type="radio" name="q3" value="a"> a) To ensure the reactants mix properly.</label>
+                    <label><input type="radio" name="q3" value="b"> b) To satisfy the Law of Conservation of Mass, stating atoms are not created or destroyed.</label>
+                    <label><input type="radio" name="q3" value="c"> c) To make the equation simpler to read.</label>
+                    <label><input type="radio" name="q3" value="d"> d) To indicate the speed of the reaction.</label>
+                </div>
+                <button type="button" class="check-answer-btn" onclick="checkSingleAnswer('q3')">Check Answer</button>
+                <div id="feedback-q3" class="quiz-feedback" style="display:none;"></div>
+            </div>
+
+            <div class="quiz-question" id="question4">
+                <p class="font-semibold text-md mb-2" style="font-family: 'Inter', sans-serif;">4. In the reaction Fe(s) + CuSO<sub>4</sub>(aq) &rarr; FeSO<sub>4</sub>(aq) + Cu(s), what visual change indicates that copper has been displaced?</p>
+                <div class="quiz-options">
+                    <label><input type="radio" name="q4" value="a"> a) The solution turns blue.</label>
+                    <label><input type="radio" name="q4" value="b"> b) A reddish-brown deposit forms on the iron.</label>
+                    <label><input type="radio" name="q4" value="c"> c) Bubbles of gas are evolved.</label>
+                    <label><input type="radio" name="q4" value="d"> d) The iron nail dissolves completely without any deposit.</label>
+                </div>
+                <button type="button" class="check-answer-btn" onclick="checkSingleAnswer('q4')">Check Answer</button>
+                <div id="feedback-q4" class="quiz-feedback" style="display:none;"></div>
+            </div>
+
+             <div class="quiz-question" id="question5">
+                <p class="font-semibold text-md mb-2" style="font-family: 'Inter', sans-serif;">5. The decomposition of silver chloride in sunlight (2AgCl(s) &rarr; 2Ag(s) + Cl<sub>2</sub>(g)) is used in:</p>
+                <div class="quiz-options">
+                    <label><input type="radio" name="q5" value="a"> a) Manufacturing of paints</label>
+                    <label><input type="radio" name="q5" value="b"> b) Black and white photography</label>
+                    <label><input type="radio" name="q5" value="c"> c) Water purification</label>
+                    <label><input type="radio" name="q5" value="d"> d) Electroplating</label>
+                </div>
+                 <button type="button" class="check-answer-btn" onclick="checkSingleAnswer('q5')">Check Answer</button>
+                <div id="feedback-q5" class="quiz-feedback" style="display:none;"></div>
+            </div>
+
+            <div class="quiz-question" id="question6">
+                <p class="font-semibold text-md mb-2" style="font-family: 'Inter', sans-serif;">6. Which of the following is an endothermic process?</p>
+                <div class="quiz-options">
+                    <label><input type="radio" name="q6" value="a"> a) Dilution of sulfuric acid</label>
+                    <label><input type="radio" name="q6" value="b"> b) Burning of methane</label>
+                    <label><input type="radio" name="q6" value="c"> c) Respiration</label>
+                    <label><input type="radio" name="q6" value="d"> d) Dissolving ammonium chloride in water</label>
+                </div>
+                <button type="button" class="check-answer-btn" onclick="checkSingleAnswer('q6')">Check Answer</button>
+                <div id="feedback-q6" class="quiz-feedback" style="display:none;"></div>
+            </div>
+
+            <div class="quiz-question" id="question7">
+                <p class="font-semibold text-md mb-2" style="font-family: 'Inter', sans-serif;">7. What does the symbol "(aq)" next to a chemical formula in an equation signify?</p>
+                <div class="quiz-options">
+                    <label><input type="radio" name="q7" value="a"> a) The substance is in a gaseous state.</label>
+                    <label><input type="radio" name="q7" value="b"> b) The substance is an acid.</label>
+                    <label><input type="radio" name="q7" value="c"> c) The substance is dissolved in water (aqueous solution).</label>
+                    <label><input type="radio" name="q7" value="d"> d) The substance is a catalyst.</label>
+                </div>
+                <button type="button" class="check-answer-btn" onclick="checkSingleAnswer('q7')">Check Answer</button>
+                <div id="feedback-q7" class="quiz-feedback" style="display:none;"></div>
+            </div>
+
+
+            <div class="quiz-question" id="question8">
+                <p class="font-semibold text-md mb-2" style="font-family: 'Inter', sans-serif;">8. When lead(II) nitrate solution is mixed with potassium iodide solution, a yellow precipitate of lead(II) iodide is formed. This is an example of:</p>
+                <div class="quiz-options">
+                    <label><input type="radio" name="q8" value="a"> a) Decomposition reaction</label>
+                    <label><input type="radio" name="q8" value="b"> b) Combination reaction</label>
+                    <label><input type="radio" name="q8" value="c"> c) Displacement reaction</label>
+                    <label><input type="radio" name="q8" value="d"> d) Double displacement (precipitation) reaction</label>
+                </div>
+                <button type="button" class="check-answer-btn" onclick="checkSingleAnswer('q8')">Check Answer</button>
+                <div id="feedback-q8" class="quiz-feedback" style="display:none;"></div>
+            </div>
+
+            <div class="quiz-question" id="question9">
+                <p class="font-semibold text-md mb-2" style="font-family: 'Inter', sans-serif;">9. A substance 'X' is used for whitewashing and is obtained by heating limestone in the absence of air. Identify 'X'.</p>
+                <div class="quiz-options">
+                    <label><input type="radio" name="q9" value="a"> a) CaO (Calcium oxide)</label>
+                    <label><input type="radio" name="q9" value="b"> b) Ca(OH)<sub>2</sub> (Calcium hydroxide)</label>
+                    <label><input type="radio" name="q9" value="c"> c) CaCO<sub>3</sub> (Calcium carbonate)</label>
+                    <label><input type="radio" name="q9" value="d"> d) CaCl<sub>2</sub> (Calcium chloride)</label>
+                </div>
+                <button type="button" class="check-answer-btn" onclick="checkSingleAnswer('q9')">Check Answer</button>
+                <div id="feedback-q9" class="quiz-feedback" style="display:none;"></div>
+            </div>
+
+            <div class="quiz-question" id="question10">
+                <p class="font-semibold text-md mb-2" style="font-family: 'Inter', sans-serif;">10. Chips manufacturers usually flush bags of chips with gas such as nitrogen to prevent the chips from getting oxidized. This is an application to prevent:</p>
+                <div class="quiz-options">
+                    <label><input type="radio" name="q10" value="a"> a) Corrosion</label>
+                    <label><input type="radio" name="q10" value="b"> b) Reduction</label>
+                    <label><input type="radio" name="q10" value="c"> c) Rancidity</label>
+                    <label><input type="radio" name="q10" value="d"> d) Sublimation</label>
+                </div>
+                <button type="button" class="check-answer-btn" onclick="checkSingleAnswer('q10')">Check Answer</button>
+                <div id="feedback-q10" class="quiz-feedback" style="display:none;"></div>
+            </div>
+             <div class="quiz-question" id="question11">
+                <p class="font-semibold text-md mb-2" style="font-family: 'Inter', sans-serif;">11. In the electrolysis of water (2H<sub>2</sub>O(l) &rarr; 2H<sub>2</sub>(g) + O<sub>2</sub>(g)), why is the volume of gas collected at one electrode double that at the other?</p>
+                <div class="quiz-options">
+                    <label><input type="radio" name="q11" value="a"> a) Oxygen is heavier than hydrogen.</label>
+                    <label><input type="radio" name="q11" value="b"> b) Hydrogen ions are smaller than oxide ions.</label>
+                    <label><input type="radio" name="q11" value="c"> c) Water molecule (H<sub>2</sub>O) contains two atoms of hydrogen and one atom of oxygen, leading to 2 moles of H<sub>2</sub> for every 1 mole of O<sub>2</sub>.</label>
+                    <label><input type="radio" name="q11" value="d"> d) Oxygen gas dissolves in water more readily.</label>
+                </div>
+                <button type="button" class="check-answer-btn" onclick="checkSingleAnswer('q11')">Check Answer</button>
+                <div id="feedback-q11" class="quiz-feedback" style="display:none;"></div>
+            </div>
+            <div class="quiz-question" id="question12">
+                <p class="font-semibold text-md mb-2" style="font-family: 'Inter', sans-serif;">12. Consider the reaction: MnO<sub>2</sub> + 4HCl &rarr; MnCl<sub>2</sub> + 2H<sub>2</sub>O + Cl<sub>2</sub>. Which statement is correct?</p>
+                <div class="quiz-options">
+                    <label><input type="radio" name="q12" value="a"> a) MnO<sub>2</sub> is oxidized to MnCl<sub>2</sub>.</label>
+                    <label><input type="radio" name="q12" value="b"> b) HCl is oxidized to Cl<sub>2</sub>.</label>
+                    <label><input type="radio" name="q12" value="c"> c) MnO<sub>2</sub> is the reducing agent.</label>
+                    <label><input type="radio" name="q12" value="d"> d) HCl is reduced to H<sub>2</sub>O.</label>
+                </div>
+                <button type="button" class="check-answer-btn" onclick="checkSingleAnswer('q12')">Check Answer</button>
+                <div id="feedback-q12" class="quiz-feedback" style="display:none;"></div>
+            </div>
+             <div class="quiz-question" id="question13">
+                <p class="font-semibold text-md mb-2" style="font-family: 'Inter', sans-serif;">13. A shiny brown coloured element 'X' on heating in air becomes black in colour. Name the element 'X' and the black coloured compound formed.</p>
+                <div class="quiz-options">
+                    <label><input type="radio" name="q13" value="a"> a) X = Silver (Ag), Black compound = Ag<sub>2</sub>S</label>
+                    <label><input type="radio" name="q13" value="b"> b) X = Copper (Cu), Black compound = CuO (Copper(II) oxide)</label>
+                    <label><input type="radio" name="q13" value="c"> c) X = Iron (Fe), Black compound = Fe<sub>3</sub>O<sub>4</sub> (Iron(II,III) oxide)</label>
+                    <label><input type="radio" name="q13" value="d"> d) X = Aluminium (Al), Black compound = Al<sub>2</sub>O<sub>3</sub> (Aluminium oxide)</label>
+                </div>
+                <button type="button" class="check-answer-btn" onclick="checkSingleAnswer('q13')">Check Answer</button>
+                <div id="feedback-q13" class="quiz-feedback" style="display:none;"></div>
+            </div>
+             <div class="quiz-question" id="question14">
+                <p class="font-semibold text-md mb-2" style="font-family: 'Inter', sans-serif;">14. What type of reaction is involved when food gets digested in our body?</p>
+                <div class="quiz-options">
+                    <label><input type="radio" name="q14" value="a"> a) Combination reaction</label>
+                    <label><input type="radio" name="q14" value="b"> b) Decomposition reaction (a type of catabolic reaction)</label>
+                    <label><input type="radio" name="q14" value="c"> c) Displacement reaction</label>
+                    <label><input type="radio" name="q14" value="d"> d) Double displacement reaction</label>
+                </div>
+                <button type="button" class="check-answer-btn" onclick="checkSingleAnswer('q14')">Check Answer</button>
+                <div id="feedback-q14" class="quiz-feedback" style="display:none;"></div>
+            </div>
+             <div class="quiz-question" id="question15">
+                <p class="font-semibold text-md mb-2" style="font-family: 'Inter', sans-serif;">15. Which of the statements about the reaction below are incorrect? <br> 2PbO(s) + C(s) &rarr; 2Pb(s) + CO<sub>2</sub>(g) </p>
+                <ol class="list-decimal list-inside ml-4 text-sm">
+                    <li>Lead is getting reduced.</li>
+                    <li>Carbon dioxide is getting oxidized.</li>
+                    <li>Carbon is getting oxidized.</li>
+                    <li>Lead oxide is getting reduced.</li>
+                </ol>
+                <div class="quiz-options mt-2">
+                    <label><input type="radio" name="q15" value="a"> a) (i) and (ii)</label>
+                    <label><input type="radio" name="q15" value="b"> b) (i) and (iii)</label>
+                    <label><input type="radio" name="q15" value="c"> c) (i), (ii) and (iii)</label>
+                    <label><input type="radio" name="q15" value="d"> d) all</label>
+                </div>
+                <button type="button" class="check-answer-btn" onclick="checkSingleAnswer('q15')">Check Answer</button>
+                <div id="feedback-q15" class="quiz-feedback" style="display:none;"></div>
+            </div>
+            <div class="quiz-question" id="question16">
+                <p class="font-semibold text-md mb-2" style="font-family: 'Inter', sans-serif;">16. Translate the statement "Hydrogen sulphide gas burns in air to give water and sulphur dioxide" into a balanced chemical equation.</p>
+                <div class="quiz-options">
+                    <label><input type="radio" name="q16" value="a"> a) H<sub>2</sub>S(g) + O<sub>2</sub>(g) &rarr; H<sub>2</sub>O(l) + SO<sub>2</sub>(g)</label>
+                    <label><input type="radio" name="q16" value="b"> b) 2H<sub>2</sub>S(g) + 3O<sub>2</sub>(g) &rarr; 2H<sub>2</sub>O(l) + 2SO<sub>2</sub>(g)</label>
+                    <label><input type="radio" name="q16" value="c"> c) H<sub>2</sub>S(g) + 2O<sub>2</sub>(g) &rarr; H<sub>2</sub>O<sub>2</sub>(l) + SO<sub>2</sub>(g)</label>
+                    <label><input type="radio" name="q16" value="d"> d) 2H<sub>2</sub>S(g) + O<sub>2</sub>(g) &rarr; 2H<sub>2</sub>O(l) + 2S(s)</label>
+                </div>
+                <button type="button" class="check-answer-btn" onclick="checkSingleAnswer('q16')">Check Answer</button>
+                <div id="feedback-q16" class="quiz-feedback" style="display:none;"></div>
+            </div>
+            <div class="quiz-question" id="question17">
+                <p class="font-semibold text-md mb-2" style="font-family: 'Inter', sans-serif;">17. Why are decomposition reactions called the opposite of combination reactions? Write one example for each.</p>
+                <div class="quiz-options">
+                    <label><input type="radio" name="q17" value="a"> a) Both form multiple products from a single reactant.</label>
+                    <label><input type="radio" name="q17" value="b"> b) Combination forms one product from multiple reactants; decomposition breaks one reactant into multiple products.</label>
+                    <label><input type="radio" name="q17" value="c"> c) Both involve only single reactants.</label>
+                    <label><input type="radio" name="q17" value="d"> d) Both are always endothermic.</label>
+                </div>
+                <button type="button" class="check-answer-btn" onclick="checkSingleAnswer('q17')">Check Answer</button>
+                <div id="feedback-q17" class="quiz-feedback" style="display:none;"></div>
+            </div>
+            <div class="quiz-question" id="question18">
+                <p class="font-semibold text-md mb-2" style="font-family: 'Inter', sans-serif;">18. What is observed when a solution of potassium iodide is added to a solution of lead nitrate taken in a test tube? What type of reaction is this?</p>
+                <div class="quiz-options">
+                    <label><input type="radio" name="q18" value="a"> a) Blue precipitate, Displacement</label>
+                    <label><input type="radio" name="q18" value="b"> b) Yellow precipitate, Double displacement (precipitation)</label>
+                    <label><input type="radio" name="q18" value="c"> c) No change, Combination</label>
+                    <label><input type="radio" name="q18" value="d"> d) Colorless gas evolved, Decomposition</label>
+                </div>
+                <button type="button" class="check-answer-btn" onclick="checkSingleAnswer('q18')">Check Answer</button>
+                <div id="feedback-q18" class="quiz-feedback" style="display:none;"></div>
+            </div>
+        </form>
+    </div>
+
+    <div class="new-questions-section">
+        <h3><span class="text-xl mr-1">💡</span> Conceptual Understanding Questions</h3>
+        <div class="question-item">
+            <p class="question-text">1. Why is respiration considered an exothermic reaction?</p>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <div class="answer-content">
+                <p>Respiration is considered an exothermic reaction because energy is released during this process. Glucose combines with oxygen in the cells of our body to produce carbon dioxide, water, and energy. This energy is utilized by the body to perform various life processes.</p>
+                <p class="equation-inline">C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>(aq) + 6O<sub>2</sub>(aq) &rarr; 6CO<sub>2</sub>(aq) + 6H<sub>2</sub>O(l) + Energy</p>
+            </div>
+        </div>
+        <div class="question-item">
+            <p class="question-text">2. What happens when quicklime is added to water? Write the chemical equation.</p>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <div class="answer-content">
+                <p>When quicklime (calcium oxide, CaO) is added to water, it reacts vigorously to form slaked lime (calcium hydroxide, Ca(OH)<sub>2</sub>) and releases a large amount of heat. This is a combination reaction and an exothermic reaction.</p>
+                <p class="equation-block">CaO(s) + H<sub>2</sub>O(l) &rarr; Ca(OH)<sub>2</sub>(aq) + Heat</p>
+            </div>
+        </div>
+        <div class="question-item">
+            <p class="question-text">3. Explain why a magnesium ribbon should be cleaned before burning in air.</p>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <div class="answer-content">
+                <p>Magnesium is a reactive metal. It slowly reacts with oxygen in the air to form a layer of magnesium oxide (MgO) on its surface. This layer is quite stable and can prevent or slow down the burning of magnesium. Therefore, the magnesium ribbon is cleaned with sandpaper to remove this protective layer of magnesium oxide so that the underlying metal can be exposed to air for combustion.</p>
+            </div>
+        </div>
+        <div class="question-item">
+            <p class="question-text">4. Can a displacement reaction be a redox reaction? Explain with an example.</p>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <div class="answer-content">
+                <p>Yes, most displacement reactions are also redox reactions. In a displacement reaction, a more reactive element displaces a less reactive element from its compound. This involves changes in the oxidation states of the reacting species.</p>
+                <p>Example: Fe(s) + CuSO<sub>4</sub>(aq) &rarr; FeSO<sub>4</sub>(aq) + Cu(s)</p>
+                <ul class="list-disc list-inside ml-4">
+                    <li>Iron (Fe) is oxidized from an oxidation state of 0 to +2 (in FeSO<sub>4</sub>). (Loss of electrons)</li>
+                    <li>Copper (Cu) in CuSO<sub>4</sub> (oxidation state +2) is reduced to Cu (oxidation state 0). (Gain of electrons)</li>
+                </ul>
+                <p>Since both oxidation and reduction occur simultaneously, it is a redox reaction.</p>
+            </div>
+        </div>
+        <div class="question-item">
+            <p class="question-text">5. What is the difference between a "skeletal" chemical equation and a "balanced" chemical equation? Why is balancing necessary?</p>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <div class="answer-content">
+                <p>A <strong class="definition-term">skeletal chemical equation</strong> is an unbalanced chemical equation. It simply represents the reactants and products involved in a chemical reaction using their symbols and formulae, without considering the number of atoms of each element on both sides. Example: Mg + O<sub>2</sub> &rarr; MgO.</p>
+                <p>A <strong class="definition-term">balanced chemical equation</strong> has an equal number of atoms of each element on both the reactant and product sides. It adheres to the Law of Conservation of Mass. Example: 2Mg + O<sub>2</sub> &rarr; 2MgO.</p>
+                <p>Balancing is necessary to satisfy the <strong class="highlight">Law of Conservation of Mass</strong>, which states that matter cannot be created or destroyed in a chemical reaction. The total mass of reactants must equal the total mass of products, which implies that the number of atoms of each element must remain the same throughout the reaction.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="new-questions-section">
+        <h3><span class="text-xl mr-1">📜</span> Previous Year Questions (PYQs - Illustrative)</h3>
+        <div class="question-item">
+            <p class="question-text">1. (CBSE 2020) Write balanced chemical equations for the following reactions: <br>
+            (a) Hydrogen sulphide gas burns in air to give water and sulphur dioxide. <br>
+            (b) Barium chloride reacts with aluminium sulphate to give aluminium chloride and a precipitate of barium sulphate.</p>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <div class="answer-content">
+                <p>(a) <span class="equation-inline">2H<sub>2</sub>S(g) + 3O<sub>2</sub>(g) &rarr; 2H<sub>2</sub>O(l) + 2SO<sub>2</sub>(g)</span></p>
+                <p>(b) <span class="equation-inline">3BaCl<sub>2</sub>(aq) + Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>(aq) &rarr; 2AlCl<sub>3</sub>(aq) + 3BaSO<sub>4</sub>(s)&darr;</span></p>
+            </div>
+        </div>
+        <div class="question-item">
+            <p class="question-text">2. (CBSE 2019) Identify the type of reaction in the following: <br>
+            (a) Fe(s) + CuSO<sub>4</sub>(aq) &rarr; FeSO<sub>4</sub>(aq) + Cu(s) <br>
+            (b) 2H<sub>2</sub>O(l) <span class="font-normal">--Electricity&rarr;</span> 2H<sub>2</sub>(g) + O<sub>2</sub>(g)</p>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <div class="answer-content">
+                <p>(a) Displacement reaction (also a redox reaction).</p>
+                <p>(b) Decomposition reaction (specifically, electrolytic decomposition).</p>
+            </div>
+        </div>
+        <div class="question-item">
+            <p class="question-text">3. (CBSE 2018) What is observed when a solution of potassium iodide is added to lead nitrate solution? Name the type of reaction. Write a balanced chemical equation for this reaction.</p>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <div class="answer-content">
+                <p><strong>Observation:</strong> A yellow precipitate is formed.</p>
+                <p><strong>Type of reaction:</strong> Double displacement reaction (specifically, a precipitation reaction).</p>
+                <p><strong>Balanced chemical equation:</strong> <span class="equation-inline">Pb(NO<sub>3</sub>)<sub>2</sub>(aq) + 2KI(aq) &rarr; PbI<sub>2</sub>(s)&darr; + 2KNO<sub>3</sub>(aq)</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="new-questions-section">
+        <h3><span class="text-xl mr-1">✏️</span> Short Answer Questions</h3>
+        <div class="question-item">
+            <p class="question-text">1. What do you mean by a precipitation reaction? Give an example.</p>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <div class="answer-content">
+                <p>A precipitation reaction is a type of chemical reaction in which two soluble salts in aqueous solution combine, and one of the products is an insoluble salt called a precipitate, which settles down.</p>
+                <p>Example: When aqueous sodium chloride (NaCl) is added to aqueous silver nitrate (AgNO<sub>3</sub>), a white precipitate of silver chloride (AgCl) is formed.</p>
+                <p class="equation-inline">AgNO<sub>3</sub>(aq) + NaCl(aq) &rarr; AgCl(s)&darr; + NaNO<sub>3</sub>(aq)</p>
+            </div>
+        </div>
+        <div class="question-item">
+            <p class="question-text">2. Why does the colour of copper sulphate solution change when an iron nail is dipped in it?</p>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <div class="answer-content">
+                <p>Iron is more reactive than copper. When an iron nail is dipped in a blue copper sulphate solution, iron displaces copper from the copper sulphate solution. This forms iron(II) sulphate, which is pale green in solution, and solid copper metal is deposited. The blue colour of copper sulphate fades and a greenish colour appears.</p>
+                <p class="equation-inline">Fe(s) + CuSO<sub>4</sub>(aq) (Blue) &rarr; FeSO<sub>4</sub>(aq) (Pale Green) + Cu(s) (Reddish-brown)</p>
+            </div>
+        </div>
+        <div class="question-item">
+            <p class="question-text">3. In the refining of silver, the recovery of silver from silver nitrate solution involved displacement by copper metal. Write down the reaction involved.</p>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <div class="answer-content">
+                <p>Copper is more reactive than silver. Therefore, copper will displace silver from silver nitrate solution. The reaction is:</p>
+                <p class="equation-block">Cu(s) + 2AgNO<sub>3</sub>(aq) &rarr; Cu(NO<sub>3</sub>)<sub>2</sub>(aq) + 2Ag(s)</p>
+                <p>In this reaction, copper displaces silver, forming copper(II) nitrate solution and solid silver.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="new-questions-section">
+        <h3><span class="text-xl mr-1">📄</span> Long Answer Questions</h3>
+        <div class="question-item">
+            <p class="question-text">1. Explain the different types of decomposition reactions with one example for each. How are these reactions different from combination reactions?</p>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <div class="answer-content">
+                <p>Decomposition reactions are those in which a single compound breaks down to give two or more simpler substances. These reactions require energy in the form of heat, light, or electricity.</p>
+                <p>Types of decomposition reactions:</p>
+                <ul class="list-disc list-inside ml-4">
+                    <li><strong>Thermal Decomposition:</strong> Decomposition by heat.
+                        <br>Example: Decomposition of calcium carbonate (limestone) on heating.
+                        <br><span class="equation-inline">CaCO<sub>3</sub>(s) <span class="font-normal">--&Delta;&rarr;</span> CaO(s) + CO<sub>2</sub>(g)</span></li>
+                    <li><strong>Electrolytic Decomposition (Electrolysis):</strong> Decomposition by passing electricity.
+                        <br>Example: Electrolysis of water.
+                        <br><span class="equation-inline">2H<sub>2</sub>O(l) <span class="font-normal">--Electricity&rarr;</span> 2H<sub>2</sub>(g) + O<sub>2</sub>(g)</span></li>
+                    <li><strong>Photolytic Decomposition (Photolysis):</strong> Decomposition by light.
+                        <br>Example: Decomposition of silver chloride in sunlight.
+                        <br><span class="equation-inline">2AgCl(s) <span class="font-normal">--Sunlight&rarr;</span> 2Ag(s) + Cl<sub>2</sub>(g)</span></li>
+                </ul>
+                <p><strong>Difference from Combination Reactions:</strong></p>
+                <p>Decomposition reactions are the opposite of combination reactions. In combination reactions, two or more substances combine to form a single new substance (A + B &rarr; AB). In decomposition reactions, a single substance breaks down into two or more simpler substances (AB &rarr; A + B). Combination reactions are generally exothermic, while decomposition reactions are generally endothermic (require energy input).</p>
+            </div>
+        </div>
+        <div class="question-item">
+            <p class="question-text">2. (a) What is meant by oxidation and reduction? Explain with an example involving the gain/loss of oxygen and another example involving the gain/loss of hydrogen. <br> (b) Identify the substances oxidized, substances reduced, oxidizing agents, and reducing agents in the following reactions: <br>
+            (i) MnO<sub>2</sub>(s) + 4HCl(aq) &rarr; MnCl<sub>2</sub>(aq) + 2H<sub>2</sub>O(l) + Cl<sub>2</sub>(g) <br>
+            (ii) Fe<sub>2</sub>O<sub>3</sub>(s) + 3CO(g) &rarr; 2Fe(s) + 3CO<sub>2</sub>(g)</p>
+            <button class="answer-toggle-btn" onclick="toggleAnswer(this)">Show/Hide Answer</button>
+            <div class="answer-content">
+                <p><strong>(a) Oxidation and Reduction:</strong></p>
+                <p><strong>Oxidation</strong> is a process that involves:</p>
+                <ul class="list-disc list-inside ml-4">
+                    <li>Gain of oxygen. Example: <span class="equation-inline">2Cu(s) + O<sub>2</sub>(g) &rarr; 2CuO(s)</span> (Copper gains oxygen to form copper oxide).</li>
+                    <li>Loss of hydrogen. Example: <span class="equation-inline">H<sub>2</sub>S(g) + Cl<sub>2</sub>(g) &rarr; 2HCl(g) + S(s)</span> (Hydrogen sulphide loses hydrogen to form sulphur).</li>
+                    <li>Loss of electrons.</li>
+                </ul>
+                <p><strong>Reduction</strong> is a process that involves:</p>
+                <ul class="list-disc list-inside ml-4">
+                    <li>Loss of oxygen. Example: <span class="equation-inline">CuO(s) + H<sub>2</sub>(g) &rarr; Cu(s) + H<sub>2</sub>O(l)</span> (Copper oxide loses oxygen to form copper).</li>
+                    <li>Gain of hydrogen. Example: <span class="equation-inline">Cl<sub>2</sub>(g) + H<sub>2</sub>(g) &rarr; 2HCl(g)</span> (Chlorine gains hydrogen to form hydrogen chloride).</li>
+                    <li>Gain of electrons.</li>
+                </ul>
+                <p><strong>(b) Identifying Oxidized/Reduced Substances and Agents:</strong></p>
+                <p><strong>(i) MnO<sub>2</sub>(s) + 4HCl(aq) &rarr; MnCl<sub>2</sub>(aq) + 2H<sub>2</sub>O(l) + Cl<sub>2</sub>(g)</strong></p>
+                <ul class="list-disc list-inside ml-4">
+                    <li><strong>Substance Oxidized:</strong> HCl (Hydrogen chloride loses hydrogen / Chlorine's oxidation state increases from -1 in HCl to 0 in Cl<sub>2</sub>).</li>
+                    <li><strong>Substance Reduced:</strong> MnO<sub>2</sub> (Manganese dioxide loses oxygen / Manganese's oxidation state decreases from +4 in MnO<sub>2</sub> to +2 in MnCl<sub>2</sub>).</li>
+                    <li><strong>Oxidizing Agent:</strong> MnO<sub>2</sub> (It oxidizes HCl by accepting electrons/causing loss of H).</li>
+                    <li><strong>Reducing Agent:</strong> HCl (It reduces MnO<sub>2</sub> by donating electrons/causing loss of O).</li>
+                </ul>
+                <p><strong>(ii) Fe<sub>2</sub>O<sub>3</sub>(s) + 3CO(g) &rarr; 2Fe(s) + 3CO<sub>2</sub>(g)</strong></p>
+                <ul class="list-disc list-inside ml-4">
+                    <li><strong>Substance Oxidized:</strong> CO (Carbon monoxide gains oxygen to form CO<sub>2</sub>).</li>
+                    <li><strong>Substance Reduced:</strong> Fe<sub>2</sub>O<sub>3</sub> (Iron(III) oxide loses oxygen to form Fe).</li>
+                    <li><strong>Oxidizing Agent:</strong> Fe<sub>2</sub>O<sub>3</sub> (It oxidizes CO by giving oxygen).</li>
+                    <li><strong>Reducing Agent:</strong> CO (It reduces Fe<sub>2</sub>O<sub>3</sub> by taking oxygen).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="keyConceptsSection" class="mt-12 pt-8 border-t-2 border-gray-300"> <h2><span class="text-xl mr-1">📝</span> Key Concepts Recap</h2>
+        <div class="my-explanation-box" style="background-color: #e6fffa; border-left-color: #38b2ac;">
+            <h4 style="color: #2c7a7b;">Important Definitions & Concepts</h4>
+            <p><strong>Chemical Reaction:</strong> Process involving rearrangement of atoms to form new substances (products) from original substances (reactants). Governed by the <strong class="definition-term">Law of Conservation of Mass</strong>.</p>
+            
+            <p><strong>Indicators of a Chemical Reaction:</strong></p>
+            <ul class="list-disc list-inside ml-4" style="color: #2c5282;">
+                <li>Change in state</li>
+                <li>Change in color</li>
+                <li>Evolution of a gas</li>
+                <li>Change in temperature (exothermic/endothermic)</li>
+                <li>Formation of a precipitate</li>
+            </ul>
+
+            <p><strong>Chemical Equation:</strong> Symbolic representation using chemical formulas. Must be <strong class="definition-term">balanced</strong> to ensure the number of atoms of each element is the same on both sides of the equation. Example: <span class="equation-inline">2Mg(s) + O<sub>2</sub>(g) &rarr; 2MgO(s)</span>.</p>
+            
+            <p><strong>Types of Chemical Reactions:</strong></p>
+            <ul class="list-disc list-inside ml-4" style="color: #2c5282;">
+                <li><strong>Combination:</strong> Two or more reactants combine to form a single product.
+                    <br>General form: A + B &rarr; AB
+                    <br>Example: <span class="equation-inline">CaO(s) + H<sub>2</sub>O(l) &rarr; Ca(OH)<sub>2</sub>(aq)</span> (Quicklime + Water)
+                </li>
+                <li><strong>Decomposition:</strong> A single reactant breaks down into two or more simpler products. Usually requires energy.
+                    <br>General form: AB &rarr; A + B
+                    <ul class="list-disc list-inside ml-6">
+                        <li>Thermal (by heat): <span class="equation-inline">CaCO<sub>3</sub>(s) <span class="font-normal">--&Delta;&rarr;</span> CaO(s) + CO<sub>2</sub>(g)</span> (Limestone decomposition)</li>
+                        <li>Electrolytic (by electricity): <span class="equation-inline">2H<sub>2</sub>O(l) <span class="font-normal">--Electricity&rarr;</span> 2H<sub>2</sub>(g) + O<sub>2</sub>(g)</span> (Electrolysis of water)</li>
+                        <li>Photolytic (by light): <span class="equation-inline">2AgCl(s) <span class="font-normal">--Sunlight&rarr;</span> 2Ag(s) + Cl<sub>2</sub>(g)</span> (Silver chloride decomposition)</li>
+                    </ul>
+                </li>
+                <li><strong>Displacement:</strong> A more reactive element displaces a less reactive element from its compound.
+                    <br>General form: A + BC &rarr; AC + B
+                    <br>Example: <span class="equation-inline">Fe(s) + CuSO<sub>4</sub>(aq) &rarr; FeSO<sub>4</sub>(aq) + Cu(s)</span> (Iron nail in copper sulfate)
+                </li>
+                <li><strong>Double Displacement:</strong> Exchange of ions between two reactants to form two new compounds.
+                    <br>General form: AB + CD &rarr; AD + CB
+                    <br>Example (Precipitation): <span class="equation-inline">Na<sub>2</sub>SO<sub>4</sub>(aq) + BaCl<sub>2</sub>(aq) &rarr; BaSO<sub>4</sub>(s)&darr; + 2NaCl(aq)</span>
+                </li>
+                <li><strong>Redox (Oxidation-Reduction):</strong> Reactions involving simultaneous oxidation and reduction.
+                    <ul class="list-disc list-inside ml-6">
+                        <li><strong>Oxidation:</strong> Gain of oxygen, loss of hydrogen, or loss of electrons.</li>
+                        <li><strong>Reduction:</strong> Loss of oxygen, gain of hydrogen, or gain of electrons.</li>
+                        <li>Substance oxidized is the <strong class="definition-term">reducing agent</strong>.</li>
+                        <li>Substance reduced is the <strong class="definition-term">oxidizing agent</strong>.</li>
+                        <li>Example: <span class="equation-inline">CuO(s) + H<sub>2</sub>(g) &rarr; Cu(s) + H<sub>2</sub>O(l)</span> (CuO is reduced, H<sub>2</sub> is oxidized).</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p><strong>Energy Changes in Reactions:</strong></p>
+            <ul class="list-disc list-inside ml-4" style="color: #2c5282;">
+                <li><strong>Exothermic Reactions:</strong> Release heat energy to the surroundings (e.g., burning of methane, respiration). The surroundings get warmer.</li>
+                <li><strong>Endothermic Reactions:</strong> Absorb heat energy from the surroundings (e.g., decomposition of limestone, photosynthesis). The surroundings get cooler or continuous energy supply is needed.</li>
+            </ul>
+
+            <p><strong>Oxidation in Everyday Life:</strong></p>
+            <ul class="list-disc list-inside ml-4" style="color: #2c5282;">
+                <li><strong>Corrosion:</strong> Gradual deterioration of metals by the action of air, moisture, or chemicals. Example: Rusting of iron (formation of hydrated iron(III) oxide, Fe<sub>2</sub>O<sub>3</sub>&middot;xH<sub>2</sub>O).</li>
+                <li><strong>Rancidity:</strong> Oxidation of fats and oils in food items, leading to unpleasant smell and taste. Prevented by using antioxidants, flushing with nitrogen gas, refrigeration, or airtight containers.</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<script>
+    // Function to toggle content visibility and icon rotation for main sections
+    function toggleContent(id) {
+        const content = document.getElementById(id);
+        const button = content.previousElementSibling; // The toggle button
+        const icon = button.querySelector('.toggle-icon'); // The SVG icon
+
+        if (content.style.display === 'block') {
+            content.style.display = 'none';
+            button.classList.remove('active');
+            if (icon) icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>'; // Plus icon
+        } else {
+            content.style.display = 'block';
+            button.classList.add('active');
+            if (icon) icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6"></path>'; // Minus icon (or use a cross like before if preferred)
+
+        }
+    }
+
+    // Function to toggle answer visibility for new question sections
+    function toggleAnswer(buttonElement) {
+        const answerContent = buttonElement.nextElementSibling; // The answer div
+        if (answerContent.style.display === 'block') {
+            answerContent.style.display = 'none';
+            buttonElement.textContent = 'Show Answer';
+        } else {
+            answerContent.style.display = 'block';
+            buttonElement.textContent = 'Hide Answer';
+        }
+    }
+
+
+    // Quiz answers object
+    const quizAnswers = {
+        q1: 'b', q2: 'd', q3: 'b', q4: 'b', q5: 'b', q6: 'd',
+        q7: 'c', q8: 'd', q9: 'a', q10: 'c', q11: 'c', q12: 'b',
+        q13: 'b', q14: 'b', q15: 'a', q16: 'b', q17: 'b', q18: 'b'
+    };
+
+    // Function to check a single quiz answer
+    function checkSingleAnswer(questionName) {
+        const feedbackEl = document.getElementById(`feedback-${questionName}`);
+        const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+        const questionContainer = document.getElementById(`question${questionName.substring(1)}`); // e.g., question1
+        const checkButton = questionContainer.querySelector('.check-answer-btn');
+
+
+        feedbackEl.style.display = 'block';
+
+        if (selectedOption) {
+            if (selectedOption.value === quizAnswers[questionName]) {
+                feedbackEl.textContent = 'Spot on! Excellent work.';
+                feedbackEl.className = 'quiz-feedback correct';
+            } else {
+                feedbackEl.textContent = `Hmm, not quite. The correct answer is option (${quizAnswers[questionName].toUpperCase()}). Check the notes again!`;
+                feedbackEl.className = 'quiz-feedback incorrect';
+            }
+            const radioButtons = document.querySelectorAll(`input[name="${questionName}"]`);
+            radioButtons.forEach(rb => rb.disabled = true);
+            if(checkButton) checkButton.disabled = true;
+
+        } else {
+            feedbackEl.textContent = 'Oops! Please select an answer for this one.';
+            feedbackEl.className = 'quiz-feedback incorrect';
+        }
+    }
+
+    // Basic window.onload, can be expanded if needed
+    window.onload = function() {
+        // Any initial setup can go here
+        console.log("Page loaded and scripts are running.");
+
+        // Initialize toggle icons for main sections to plus
+        document.querySelectorAll('.toggle-button .toggle-icon').forEach(icon => {
+             icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>'; // Plus icon
+        });
+    };
+</script>
+
+</body>
+</html>
